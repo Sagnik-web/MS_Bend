@@ -11,7 +11,12 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/v1/todo',todoRouter)
-
+app.get('/',(req,res)=>{
+    res.status(200).json({
+        success:true,
+        status:"OK"
+    })
+})
 
 
 
